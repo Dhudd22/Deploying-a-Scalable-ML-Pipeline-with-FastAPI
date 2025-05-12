@@ -4,7 +4,7 @@ import pytest
 from ml.model import compute_model_metrics, train_model, inference
 import pandas as pd
 import numpy as np
-from train_model import load_data
+from sklearn.base import BaseEstimator, ClassifierMixin
 
 
 root_dir = os.path.join(os.path.dirname(__file__), '..')
@@ -24,15 +24,17 @@ def test_metrics():
 
 
 # TODO: implement the second test. Change the function name and input as needed
-def test_data_load():
+def test_pipeline():
     """
-    test to ensure data was loaded correctly
+    test to ensure pipeline works correctly
     """
     # Your code here
-   
-    data = load_data()
+    X = np.random.rand(20, 5)
+    y = np.random.randint(2, size=20)
+    model = train_model(X, y)
+    assert isinstance(model, BaseEstimator) and isinstance(
+        model, ClassifierMixin)
     
-    assert data.shape == (32562, 15)
     
 
 
