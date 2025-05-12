@@ -80,7 +80,8 @@ def save_model(model, path):
         Path to save pickle file.
     """
     # TODO: implement the function
-    pickle.dump(model, path)
+    with open(path, 'wb') as file:
+        pickle.dump(model, file)
     
 
 def load_model(path):
