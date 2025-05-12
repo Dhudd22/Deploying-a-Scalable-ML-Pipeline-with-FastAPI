@@ -1,11 +1,13 @@
 import os
+import sys
 import pytest
 from ml.model import compute_model_metrics, train_model, inference
 import pandas as pd
 import numpy as np
 
 
-
+root_dir = os.path.join(os.path.dirname(__file__), '..')
+sys.path.append(root_dir)
 
 def test_metrics():
     """
