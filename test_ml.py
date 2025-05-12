@@ -4,12 +4,9 @@ from ml.model import compute_model_metrics, train_model, inference
 import pandas as pd
 
 
-project_path = os.getcwd()
-data_path = os.path.join(project_path, "data", "census.csv")
-print(data_path)
-data = pd.read_csv(data_path)
 
-def metrics_test():
+
+def test_metrics():
     """
     Test to ensure the model metrics are populating as expected
     """
@@ -23,7 +20,7 @@ def metrics_test():
 
 
 # TODO: implement the second test. Change the function name and input as needed
-def load_base_data_test():
+def ltest_data_load():
     """
     test to ensure data was loaded correctly
     """
@@ -35,7 +32,7 @@ def load_base_data_test():
 
 
 # TODO: implement the third test. Change the function name and input as needed
-def inference_test():
+def test_inference():
     """
     tests the models inference ability
     """
