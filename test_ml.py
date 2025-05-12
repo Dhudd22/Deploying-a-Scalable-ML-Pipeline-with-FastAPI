@@ -29,10 +29,8 @@ def ltest_data_load():
     """
     # Your code here
    
-    project_path = os.getcwd()
-    data_path = os.path.join(project_path, "data", "census.csv")
-    print(data_path)
-    data = pd.read_csv(data_path)
+    
+    
     assert data.shape == (32562, 15)
     
 
