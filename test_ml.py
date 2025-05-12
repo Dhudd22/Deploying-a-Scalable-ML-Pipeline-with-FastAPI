@@ -1,3 +1,4 @@
+import os
 import pytest
 from ml.model import compute_model_metrics, train_model, inference
 
