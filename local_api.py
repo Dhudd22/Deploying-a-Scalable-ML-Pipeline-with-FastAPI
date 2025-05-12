@@ -11,7 +11,7 @@ print(f'Status Code: {r.status_code}')
 # TODO: print the welcome message
 # print()
 if r.status_code == 200:
-    print(f'Result: {r.json().get("message")}')
+    print(f'Result: {r.json()}')
 else:
     print('Failed to retrieve the welcome message.')
 
