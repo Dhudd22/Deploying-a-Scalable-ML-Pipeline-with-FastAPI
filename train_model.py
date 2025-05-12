@@ -12,11 +12,15 @@ from ml.model import (
     save_model,
     train_model,
 )
-# TODO: load the cencus.csv data
-project_path = os.getcwd()
-data_path = os.path.join(project_path, "data", "census.csv")
-print(data_path)
-data = pd.read_csv(data_path)
+def load_data(
+    project_path = os.getcwd(),
+    data_path = os.path.join(project_path, "data", "census.csv"),
+    data = pd.read_csv(data_path)
+
+    return data
+)
+
+data = load_data()
 
 # TODO: split the provided data to have a train dataset and a test dataset
 # Optional enhancement, use K-fold cross validation instead of a train-test split.
