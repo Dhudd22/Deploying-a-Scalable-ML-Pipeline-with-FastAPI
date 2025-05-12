@@ -12,13 +12,13 @@ from ml.model import (
     save_model,
     train_model,
 )
-def load_data(
+def load_data():
     project_path = os.getcwd(),
     data_path = os.path.join(project_path, "data", "census.csv"),
-    data = pd.read_csv(data_path)
+    data_df = pd.read_csv(data_path)
 
-    return data
-)
+    return data_df
+
 
 data = load_data()
 
